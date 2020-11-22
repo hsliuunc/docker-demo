@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-python3 hello_world.py 
+python3 app/hello_world.py 
