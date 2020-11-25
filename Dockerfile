@@ -1,9 +1,9 @@
-FROM ubuntu:20.04
-
-RUN apt update -y
-RUN apt install -y python3-pip
-COPY . /app
+FROM python:3.8.3-slim
+LABEL maintainer="Hongsheng Liu<hsliuustc@gmail.com>"
 WORKDIR /app
-RUN pip3 install -r requirements.txt
-ENTRYPOINT ["python3"]
-CMD ["app/hello_world.py"]
+COPY . /app
+RUN pip --no-cache-dir install numpy pandas seaborn sklearn jupyter
+EXPOSE 8080
+
+# Run app.py when the container launches
+CMD ["jupyter", "notebook", "--ip='*'", "--port=8080", "--no-browser", "--allow-root"]
