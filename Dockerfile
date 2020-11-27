@@ -7,6 +7,7 @@
 # CMD ["python", "/app/main.py"]
 
 FROM ubuntu:18.04
+LABEL maintainer="Hongsheng Liu<hsliuustc@gmail.com>"
 ENV PATH="/root/miniconda3/bin:${PATH}"
 ARG PATH="/root/miniconda3/bin:${PATH}"
 
