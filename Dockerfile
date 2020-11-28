@@ -21,7 +21,7 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
 
 RUN conda create -y -n hero python=3.7
 
-# COPY . src/
+COPY requirements.txt src/
 RUN /bin/bash -c "cd src \
     && source activate hero \
     && pip install -r requirements.txt"
