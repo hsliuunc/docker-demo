@@ -12,7 +12,8 @@ Run
 docker run -ti docker-demo /bin/bash -c "source activate hero && cd src/app && python main.py"
 ```
 
+
 To save output in local path, run
 ```
-docker run  -v /abs/local/data/path/:/root/data -ti docker-demo /bin/bash -c "source activate hero && cd src && python main.py"
+docker run  -v $(pwd)/data:/root/data -v $(pwd):/root hsliuustc/docker-demo /bin/bash -c "source activate hero && cd root && python main.py"
 ```
