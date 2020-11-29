@@ -50,4 +50,4 @@ disp = metrics.plot_confusion_matrix(classifier, X_test, y_test)
 disp.figure_.suptitle("Confusion Matrix")
 print("Confusion matrix:\n%s" % disp.confusion_matrix)
 
-plt.savefig("/root/data/cm_mnist_1.png")
+plt.savefig("/root/data/cm_mnist.png")
